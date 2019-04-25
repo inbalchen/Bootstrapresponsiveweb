@@ -1,0 +1,68 @@
+html {
+	height: 100%;
+}
+body {
+	background:url(https://images.unsplash.com/photo-1555698418-4bf32bfe5736?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1000&q=80) fixed;
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	min-height:100%;
+	padding:0; margin:0; position:relative; 
+}
+body::after{ content:''; display:block; height:100px; }
+.astyle {
+	color: rgba(0,0,0,.5);
+}
+.btn-secondary {
+	background-color: #f8f9fa!important;
+	border-color: #f8f9fa!important;
+	color: rgba(0,0,0,.5);
+}
+.carousel {
+	width: 55%;
+    height: 40%;
+    margin: 100px auto;
+    border: 2px solid;
+}
+.title {
+	text-align: center;
+	color: #fff;
+}
+.page-footer {
+	color: #fff;
+	width: 100%;
+	text-align: center;
+	font-size: 12px;	
+	position: absolute;
+  	bottom: 0;
+}
+.page-footer p {
+	margin: 10px;
+}
+.emailloginform {
+	width: 40%;
+    margin: 100px auto;
+}
+#emailHelp {
+	background: rgba(255,255,255,.3);
+}
+.form-group label {
+	color: #fff;
+}
+.signform {
+	width: 40%;
+	margin:100px auto;
+}
+.card-deck {
+	width: 60%;
+	margin:100px auto;
+}
+.card-footer {
+	text-align: center;
+}
+.navbar-nav li:hover {
+	background:rgba(0,0,0,.4);
+}
+.bglight{
+	background: rgba(255,255,255,.8);
+}
