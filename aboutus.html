@@ -11,7 +11,10 @@
 		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
 	</head>
 	<body>
-		<nav class="navbar navbar-expand-lg navbar-light bglight">
+		<div id="fb-root"></div>
+		<script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.2&appId=387473271839894&autoLogAppEvents=1"></script>
+		
+		<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
 		<div class="container">
 	  		<a class="navbar-brand" href="#">Culture</a>
 	  		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -34,8 +37,13 @@
 	  			</a>
 	  			<div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
 	    			<span>Log In Via:</span>
-	    			<a class="dropdown-item" href="#"><i class="fab fa-facebook-square"></i> Facebook</a>
-	    			<a class="dropdown-item" href="#"><i class="fab fa-linkedin"></i> Linkedin</a>
+	  				<div class="fb-login-button" data-width="" data-size="medium" data-button-type="login_with" data-auto-logout-link="false" data-use-continue-as="false">
+
+						<fb:login-button 
+						scope="public_profile,email"
+						onlogin="checkLoginState();">
+						</fb:login-button>
+					</div>
 	    			<a class="dropdown-item" href="emaillogin.html"><i class="fas fa-envelope"></i> Email</a>
 	  			</div>
 			</div>
@@ -44,7 +52,7 @@
 	</nav>
 
 	<!-- card -->
-	<div class="card-deck">
+	<div class="card-deck bg-light">
 	  <div class="card">
 	    <img src="https://images.unsplash.com/photo-1546410531-bb4caa6b424d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1000&q=80" class="card-img-top" alt="...">
 	    <div class="card-body">
@@ -77,4 +85,28 @@
 	  </div>
 	</div>
 	</body>
+
+	<script>
+	  window.fbAsyncInit = function() {
+	    FB.init({
+	      appId      : '387473271839894',
+	      cookie     : true,
+	      xfbml      : true,
+	      version    : '{api-version}'
+	    });
+	      
+	    FB.AppEvents.logPageView();   
+	      
+	  };
+
+	  (function(d, s, id){
+	     var js, fjs = d.getElementsByTagName(s)[0];
+	     if (d.getElementById(id)) {return;}
+	     js = d.createElement(s); js.id = id;
+	     js.src = "https://connect.facebook.net/en_US/sdk.js";
+	     fjs.parentNode.insertBefore(js, fjs);
+	   }(document, 'script', 'facebook-jssdk'));
+		
+	</script>
+
 	</html>
