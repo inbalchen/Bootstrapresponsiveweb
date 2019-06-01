@@ -20,18 +20,12 @@
 		      appId      : '387473271839894',
 		      cookie     : true,
 		      xfbml      : true,
-		      version    : '{v3.3}'
+		      version    : 'v3.3'
 		    });
 		      
 		    FB.AppEvents.logPageView();   
 		      
 		  };
-
-			function checkLoginState() {
-			  FB.getLoginStatus(function(response) {
-			    statusChangeCallback(response);
-			  });
-			}
 
 		  (function(d, s, id){
 		     var js, fjs = d.getElementsByTagName(s)[0];
